@@ -12,22 +12,20 @@ angular.module("App").controller('AppController', ["$scope", "$rootScope", "$loc
     $scope.controller = this;
 
     $scope.getUserData = function (userToken) {
-        $http.get('/api/user/' + userToken).then(function (response) {
-            console.log(response.data);
-
-            $scope.storage.userData = response.data.data;
+        $http.get('/api/users/' + userToken).then(function (response) {
+            $scope.storage.userData = response.data;
         });
     };
 
     $scope.loginFacebook = function () {
-        return '/user/facebook';
+        return '/users/facebook';
     };
 
     if (sessionAuth !== null && sessionAuth !== undefined) {
         $scope.storage.sessionToken = sessionAuth;
     }
 
-    if ($scope.storage.sessionToken !== null && $scope.storage.userData === null) {
+    if ($scope.storage.sessionToken !== null) {
         $scope.getUserData($scope.storage.sessionToken);
     }
 }]);

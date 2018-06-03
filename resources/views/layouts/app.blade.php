@@ -23,7 +23,7 @@
 </script>
 <script type="application/javascript" src="/js/angular/app.js"></script>
 <script>
-    angular.module("App").value('sessionAuth', {{ $startCode ?? '' }});
+    angular.module("App").value('sessionAuth', '{{ $startCode ?? '' }}');
 </script>
 @yield('scripts')
 </body>

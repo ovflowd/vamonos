@@ -57,7 +57,7 @@ class UserController extends Controller
      */
     public function getOne(string $userHash)
     {
-        $obj = User::where('facebook', $userHash)->first();
+        $obj = User::where('session_token', $userHash)->first();
 
         return response()->json($obj);
     }
@@ -69,7 +69,9 @@ class UserController extends Controller
      */
     public function facebook()
     {
-        return Socialite::with('facebook')->stateless()->redirect();
+        return Socialite::with('facebook')->scopes([
+            'email', 'user_birthday', 'user_friends'
+        ])->stateless()->redirect();
     }
 
     /**
@@ -84,7 +86,7 @@ class UserController extends Controller
         $user = User::where('facebook', $facebook->id)->first();
 
         if ($user) {
-            $user->update(['session_token' => hex2bin(openssl_random_pseudo_bytes(20))]);
+            $user->update(['session_token' => bin2hex(openssl_random_pseudo_bytes(20))]);
 
             return redirect("/event/start/{$user->session_token}");
         }
@@ -93,7 +95,7 @@ class UserController extends Controller
             'name' => $facebook->name,
             'email' => $facebook->email,
             'facebook' => $facebook->id,
-            'session_token' => hex2bin(openssl_random_pseudo_bytes(20))
+            'session_token' => bin2hex(openssl_random_pseudo_bytes(20))
         ]);
 
         return redirect("/event/start/{$user->session_token}");

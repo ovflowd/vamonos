@@ -24,7 +24,7 @@
                 <div class="grid-x place">
                     <i class="material-icons">place</i>
                     <p>
-                        Ir ao @{{storage.eventName}} com seus amigos!
+                        Vamos chamar seus amigos e ir ao "@{{storage.eventName}}"
                     </p>
                 </div>
             </div>
