@@ -49,3 +49,9 @@ mix.js([
     'resources/assets/js/pages/event.js',
     'resources/assets/js/controllers/EventController.js'
 ], 'public/js/angular/event.js');
+
+// Results Page
+mix.js([
+    'resources/assets/js/pages/results.js',
+    'resources/assets/js/controllers/ResultsController.js'
+], 'public/js/angular/results.js');

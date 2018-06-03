@@ -61,4 +61,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
     // CalculaLocal
     $router->get('calculate/{id}', 'EventController@calculateBestPlace');
+
+    // Maps
+    $router->get('places/{fts}', 'PlaceController@search');
 });

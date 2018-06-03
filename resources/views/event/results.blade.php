@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('angular')'page.event'@endsection
+@section('angular')'page.results'@endsection
 
 @section('scripts')
-    <script type="application/javascript" src="/js/angular/event.js"></script>
+    <script type="application/javascript" src="/js/angular/results.js"></script>
 @endsection
 
 @section('content')
-    <section class="wait" ng-controller="EventController">
+    <section class="wait" ng-controller="ResultsController">
         <div class="grid-x">
             <div class="cell header">
                 <div class="top">

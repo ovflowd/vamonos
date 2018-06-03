@@ -79,6 +79,8 @@ $app->routeMiddleware([
 $app->register(App\Providers\AppServiceProvider::class);
 $app->register(App\Providers\AuthServiceProvider::class);
 $app->register(Laravel\Socialite\SocialiteServiceProvider::class);
+$app->register(GoogleMaps\ServiceProvider\GoogleMapsServiceProvider::class);
+$app->register(Irazasyed\Larasupport\Providers\ArtisanServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------

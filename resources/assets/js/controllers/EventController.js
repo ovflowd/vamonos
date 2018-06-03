@@ -19,6 +19,6 @@ angular.module("page.event").controller('EventController', ["$scope", "$localSto
     };
 
     $scope.startSearch = function () {
-
+        $window.location.href = '/event/wait';
     };
 }]);

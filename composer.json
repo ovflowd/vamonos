@@ -9,7 +9,9 @@
         "laravel/lumen-framework": "5.6.*",
         "vlucas/phpdotenv": "~2.2",
         "laravel/socialite": "^2.0",
-        "mlntn/lumen-artisan-serve": "~1"
+        "mlntn/lumen-artisan-serve": "~1",
+        "alexpechkarev/google-maps": "1.0.9",
+        "irazasyed/larasupport": "^1.6"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
