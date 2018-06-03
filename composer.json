@@ -1,7 +1,7 @@
 {
-    "name": "laravel/lumen",
-    "description": "The Laravel Lumen Framework.",
-    "keywords": ["framework", "laravel", "lumen"],
+    "name": "ovflowd/makkah",
+    "description": "Make encounters with an ease of qiblah.",
+    "keywords": ["uber", "google", "places", "mobility", "accessibility"],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -23,11 +23,6 @@
         "classmap": [
             "tests/",
             "database/"
-        ]
-    },
-    "scripts": {
-        "post-root-package-install": [
-            "php -r \"copy('.env.example', '.env');\""
         ]
     },
     "minimum-stability": "dev",
