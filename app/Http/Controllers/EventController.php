@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Events;
 use Laravel\Lumen\Routing\Controller;
+use Illuminate\View\View;
+use App\Events;
 
-class EventsController extends Controller
+class EventController extends Controller
 {
     /**
      * Retrieve all the Users
