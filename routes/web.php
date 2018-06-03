@@ -13,10 +13,16 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
+use Illuminate\Support\Facades\DB;
+
 // Home Route
 $router->get('/', 'HomeController@index');
 
 // API Routes
 $router->group(['prefix' => 'api'], function () use ($router) {
-    // API Routes Here
+    $router->get('/users', function(){
+        $users = DB::table('users')->get();
+        return $users;
+    });
 });
+
