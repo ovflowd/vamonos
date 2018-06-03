@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Events;
 use App\User;
+use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller;
 
 class UserController extends Controller
@@ -21,12 +23,14 @@ class UserController extends Controller
 
     public function store(Request $request){
         $obj = Events::create($request->all());
+
         return response()->json($obj);
     }
 
     public function delete($id){
         $obj  = User::find($id);
         $obj->delete();
+
         return response()->json('Removed successfully.');
     }
 }

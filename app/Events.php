@@ -39,6 +39,4 @@ class Events extends Model implements AuthenticatableContract, AuthorizableContr
     {
         return $this->hasMany('App\Places', 'event_id', 'id');
     }
-
-
 }

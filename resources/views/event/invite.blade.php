@@ -15,28 +15,99 @@
                     <h5 class="float-left">Mazee</h5>
                     <i class="material-icons float-right person">person</i>
                 </div>
-                <input type="text" class="float-center" placeholder="Encontre os seus amigos"/>
+                <div class="input-holder">
+                    <input type="text" class="float-center" placeholder="Encontre os seus amigos"/>
+                    <i class="material-icons">apps</i>
+                </div>
+            </div>
+            <div class="cell">
                 <div class="grid-x place">
-                    <div class="cell small-2">
-                        <i class="material-icons">place</i>
-                    </div>
-                    <div class="cell small-10">
-                        <p>
-                            Ir ao @{{storage.eventName}} com seus amigos!
-                        </p>
-                    </div>
+                    <i class="material-icons">place</i>
+                    <p>
+                        Ir ao @{{storage.eventName}} com seus amigos!
+                    </p>
                 </div>
             </div>
             <div class="cell content">
-                <ul class="menu vertical">
-                    <li>
-                        <div class="img" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')"></div>
-                        <span>
-
+                <small>Recentes procurados</small>
+                <ul class="menu vertical friends">
+                    <li ng-click="selectFriend(1)">
+                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
+                            <i class="material-icons">check</i>
+                        </div>
+                        <span class="float-left">
+                            Funk é Ruim
+                        </span>
+                    </li>
+                    <li ng-click="selectFriend(2)">
+                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
+                            <i class="material-icons">check</i>
+                        </div>
+                        <span class="float-left">
+                            Funk é Ruim
+                        </span>
+                    </li>
+                    <li ng-click="selectFriend(3)">
+                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
+                            <i class="material-icons">check</i>
+                        </div>
+                        <span class="float-left">
+                            Funk é Ruim
+                        </span>
+                    </li>
+                    <li ng-click="selectFriend(4)">
+                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
+                            <i class="material-icons">check</i>
+                        </div>
+                        <span class="float-left">
+                            Funk é Ruim
+                        </span>
+                    </li>
+                    <li ng-click="selectFriend(5)">
+                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
+                            <i class="material-icons">check</i>
+                        </div>
+                        <span class="float-left">
+                            Funk é Ruim
+                        </span>
+                    </li>
+                    <li ng-click="selectFriend(6)">
+                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
+                            <i class="material-icons">check</i>
+                        </div>
+                        <span class="float-left">
+                            Funk é Ruim
+                        </span>
+                    </li>
+                    <li ng-click="selectFriend(7)">
+                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
+                            <i class="material-icons">check</i>
+                        </div>
+                        <span class="float-left">
+                            Funk é Ruim
+                        </span>
+                    </li>
+                    <li ng-click="selectFriend(8)">
+                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
+                            <i class="material-icons">check</i>
+                        </div>
+                        <span class="float-left">
+                            Funk é Ruim
+                        </span>
+                    </li>
+                    <li ng-click="selectFriend(9)">
+                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
+                            <i class="material-icons">check</i>
+                        </div>
+                        <span class="float-left">
+                            Funk é Ruim
                         </span>
                     </li>
                 </ul>
             </div>
+            <a class="button text-center search-places">
+                Encontrar lugares
+            </a>
         </div>
     </section>
 @endsection

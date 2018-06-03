@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller;
 use App\Events;
 
@@ -45,20 +46,23 @@ class EventController extends Controller
         return view('event.invite');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $obj = Events::create($request->all());
         return response()->json($obj);
     }
 
+
     public function delete($id){
         $obj  = Events::find($id);
         $obj->delete();
+
         return response()->json('Removed successfully.');
     }
 
     public function calculateBestPlace($id){
-        $event = Events::get($id);
+        $event = Events::where("id",$id)->get();
 
-        dd($event);
+        dd($event->name);
     }
 }
