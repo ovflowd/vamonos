@@ -114,6 +114,7 @@ html, body, p, * {
 
       .input-holder {
         position: relative;
+        margin-top: -30px;
 
         i {
           position: absolute;
@@ -275,7 +276,7 @@ html, body, p, * {
 
   .invite, .wait {
     .header {
-      background: linear-gradient(0deg, white 50%, #2E737C 50%);
+      background: linear-gradient(0deg, white 50%, #378B99 50%);
       width: 100%;
       height: 210px;
       padding: 20px 40px;

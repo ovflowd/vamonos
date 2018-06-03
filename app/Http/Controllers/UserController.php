@@ -21,13 +21,25 @@ class UserController extends Controller
         return $users;
     }
 
+    /**
+     * Store an User
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function store(Request $request){
         $obj = Events::create($request->all());
 
         return response()->json($obj);
     }
 
-    public function delete($id){
+    /**
+     * Delete an User
+     *
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function delete(int $id){
         $obj  = User::find($id);
         $obj->delete();
 

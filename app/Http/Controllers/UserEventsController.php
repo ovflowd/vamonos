@@ -9,6 +9,8 @@ use Laravel\Lumen\Routing\Controller;
 class UserEventsController extends Controller
 {
     /**
+     * Store a User Event
+     *
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
@@ -18,7 +20,13 @@ class UserEventsController extends Controller
         return response()->json($obj);
     }
 
-    public function delete($id){
+    /**
+     * Delete a User Event
+     *
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function delete(int $id){
         $obj  = UserEvent::find($id);
         $obj->delete();
 

@@ -56,22 +56,51 @@ class EventController extends Controller
         return view('event.wait');
     }
 
+    /**
+     * Show the Algorithm Results
+     *
+     * @param array $results
+     * @return \Illuminate\View\View
+     */
+    public function results(array $results)
+    {
+        return view('event.results', compact('results'));
+    }
+
+    /**
+     * Store a new Event
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function store(Request $request)
     {
         $obj = Events::create($request->all());
         return response()->json($obj);
     }
 
-
-    public function delete($id){
-        $obj  = Events::find($id);
+    /**
+     * Delete an Event
+     *
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function delete(int $id)
+    {
+        $obj = Events::find($id);
         $obj->delete();
 
         return response()->json('Removed successfully.');
     }
 
-    public function calculateBestPlace($id){
-        $event = Events::where("id",$id)->get();
+    /**
+     * Don't die.
+     *
+     * @param int $id
+     */
+    public function calculateBestPlace(int $id)
+    {
+        $event = Events::where("id", $id)->get();
 
         dd($event->name);
     }

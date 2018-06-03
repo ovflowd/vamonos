@@ -23,6 +23,8 @@ $router->group(['prefix' => 'event'], function () use ($router) {
     $router->get('invite', 'EventController@invite');
 
     $router->get('wait', 'EventController@wait');
+
+    $router->get('results', 'EventController@results');
 });
 
 // API Routes

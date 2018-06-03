@@ -11,7 +11,8 @@
         <div class="grid-x">
             <div class="cell header">
                 <div class="top">
-                    <h5 class="float-left"><img src="/assets/white_logomark.png"/> vamonos</h5>
+                    <i class="material-icons float-left arrow">arrow_back</i>
+                    <h5 class="text-center"><img src="/assets/white_logomark.png"/> vamonos</h5>
                     <i class="material-icons float-right person">person</i>
                 </div>
                 <div class="input-holder">

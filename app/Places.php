@@ -33,6 +33,11 @@ class Places extends Model implements AuthenticatableContract, AuthorizableContr
      */
     protected $hidden = [];
 
+    /**
+     * Event Relationship
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function event()
     {
         return $this->belongsTo('App\Event', 'event_id', 'id');
