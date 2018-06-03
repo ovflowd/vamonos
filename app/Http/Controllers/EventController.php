@@ -29,11 +29,12 @@ class EventController extends Controller
     /**
      * Start an Event
      *
+     * @param string $startCode
      * @return \Illuminate\View\View
      */
-    public function start()
+    public function start(string $startCode)
     {
-        return view('event.start');
+        return view('event.start', compact('startCode'));
     }
 
     /**

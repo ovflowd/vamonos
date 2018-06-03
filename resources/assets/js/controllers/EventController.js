@@ -16,16 +16,6 @@ angular.module("page.event").controller('EventController', ["$scope", "$localSto
         jQuery('.friends li:nth-of-type(' + friendId + ')').toggleClass('is-active');
     };
 
-    $scope.redirectUser = function (tokenIdentifier) {
-        console.log(tokenIdentifier);
-
-        $scope.storage.sessionToken = tokenIdentifier;
-
-        $scope.getUserData(tokenIdentifier);
-
-        $window.location.href = '/event/start';
-    };
-
     $scope.startSearch = function () {
 
     };

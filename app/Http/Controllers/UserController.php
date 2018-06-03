@@ -50,14 +50,14 @@ class UserController extends Controller
     }
 
     /**
-     * Get an User
+     * Get an User by it Hash
      *
-     * @param int $id
+     * @param string $userHash
      * @return \Illuminate\Http\JsonResponse
      */
-    public function getOne(int $id)
+    public function getOne(string $userHash)
     {
-        $obj = User::find($id);
+        $obj = User::where('facebook', $userHash)->first();
 
         return response()->json($obj);
     }
@@ -69,7 +69,7 @@ class UserController extends Controller
      */
     public function facebook()
     {
-        return Socialite::with('facebook')->redirect();
+        return Socialite::with('facebook')->stateless()->redirect();
     }
 
     /**
@@ -79,21 +79,23 @@ class UserController extends Controller
      */
     public function facebookCallback()
     {
-        $facebook = Socialite::with('facebook')->user();
+        $facebook = Socialite::with('facebook')->stateless()->user();
 
         $user = User::where('facebook', $facebook->id)->first();
 
         if ($user) {
             $user->update(['session_token' => hex2bin(openssl_random_pseudo_bytes(20))]);
 
-            return $user->session_token;
+            return redirect("/event/start/{$user->session_token}");
         }
 
-        return User::create([
+        $user = User::create([
             'name' => $facebook->name,
             'email' => $facebook->email,
             'facebook' => $facebook->id,
             'session_token' => hex2bin(openssl_random_pseudo_bytes(20))
-        ])->session_token;
+        ]);
+
+        return redirect("/event/start/{$user->session_token}");
     }
 }
