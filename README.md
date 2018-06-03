@@ -1,7 +1,7 @@
-# makkah <sub><img src="https://img4.apk.tools/150/4/3/1/dolog.com.iman.qibladirection.png" wdith="30" height="30"/></sub>
+# vamonos 
 find a _cool_ place **near** to you and **your crew** :shipit:
 
-![Github All Releases](https://img.shields.io/github/downloads/ovflowd/makkah/total.svg) ![license](https://img.shields.io/github/license/mashape/apistatus.svg) ![Packagist](https://img.shields.io/packagist/v/ovflowd/makkah.svg)
+![Github All Releases](https://img.shields.io/github/downloads/ovflowd/vamonos/total.svg) ![license](https://img.shields.io/github/license/mashape/apistatus.svg) ![Packagist](https://img.shields.io/packagist/v/ovflowd/vamonos.svg)
 
 ### Installing
 

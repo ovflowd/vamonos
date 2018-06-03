@@ -8,11 +8,10 @@
 
 @section('content')
     <section class="invite" ng-controller="EventController">
-        <div class="background"></div>
         <div class="grid-x">
             <div class="cell header">
                 <div class="top">
-                    <h5 class="float-left">Mazee</h5>
+                    <h5 class="float-left"><img src="/assets/white_logomark.png"/> vamonos</h5>
                     <i class="material-icons float-right person">person</i>
                 </div>
                 <div class="input-holder">
@@ -105,7 +104,7 @@
                     </li>
                 </ul>
             </div>
-            <a class="button text-center search-places">
+            <a class="button text-center search-places" ng-click="startSearch()">
                 Encontrar lugares
             </a>
         </div>

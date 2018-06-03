@@ -2,6 +2,62 @@ html, body, p, * {
   font-family: 'Roboto', sans-serif;
 }
 
+@keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%
+  }
+  60% {
+    left: 100%;
+    right: -90%
+  }
+  100% {
+    left: 100%;
+    right: -90%
+  }
+}
+
+.progress {
+  position: relative;
+  height: 4px;
+  display: block;
+  width: 100%;
+  background-color: #acece6;
+  border-radius: 2px;
+  margin: .5rem 0 1rem 0;
+  overflow: hidden;
+
+  .indeterminate {
+    background-color: #26a69a;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+      animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      -webkit-animation-delay: 1.15s;
+      animation-delay: 1.15s;
+    }
+  }
+}
+
 .web-app {
   .start {
     .background {
@@ -55,26 +111,6 @@ html, body, p, * {
 
   .invite {
     .header {
-      background: linear-gradient(0deg, white 50%, #2E737C 50%);
-      width: 100%;
-      height: 210px;
-      padding: 20px 40px;
-
-      .top {
-        .person {
-          color: white;
-          font-size: 24pt;
-        }
-
-        h5 {
-          font-family: 'Roboto Light', sans-serif;
-          font-weight: 100;
-          font-size: 14pt;
-          color: white;
-          line-height: 1.7;
-          margin-left: 40%;
-        }
-      }
 
       .input-holder {
         position: relative;
@@ -191,11 +227,102 @@ html, body, p, * {
   }
 
   .login {
+    .content {
+      padding: 40px;
+      z-index: 10;
+      position: relative;
+
+      .logo {
+        margin: 40px;
+
+        img {
+          width: 54px;
+          height: 68px;
+          margin-top: -5px;
+        }
+
+        h1 {
+          color: white;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+          display: inline-block;
+          margin: 10px;
+        }
+      }
+
+      .text {
+        margin: 40px 0;
+
+        p {
+          color: white;
+          font-family: 'Roboto Light', sans-serif;
+          font-weight: 100;
+
+          &:nth-of-type(2) {
+            margin: 40px 0 0 0;
+          }
+        }
+      }
+    }
+
     .background {
       width: 100%;
       height: 100%;
       background: #184E57;
       position: absolute;
+    }
+  }
+
+  .invite, .wait {
+    .header {
+      background: linear-gradient(0deg, white 50%, #2E737C 50%);
+      width: 100%;
+      height: 210px;
+      padding: 20px 40px;
+
+      .top {
+        .person, .arrow {
+          color: white;
+          font-size: 24pt;
+        }
+
+        .person {
+          margin-top: -40px;
+        }
+
+        h5 {
+          font-family: 'Roboto Light', sans-serif;
+          font-weight: 100;
+          font-size: 14pt;
+          color: white;
+          line-height: 1.7;
+          margin-right: 40px;
+
+          img {
+            width: 24px;
+            height: 31px;
+          }
+        }
+      }
+    }
+  }
+
+  .wait {
+    .please {
+
+      h1 {
+        color: #565656;
+        font-family: 'Roboto Light', sans-serif;
+        font-weight: 100;
+        margin-top: -60px;
+      }
+
+      .progress {
+        position: absolute;
+        width: 200px;
+        bottom: 0;
+        left: 25%;
+      }
     }
   }
 }

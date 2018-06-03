@@ -46,6 +46,16 @@ class EventController extends Controller
         return view('event.invite');
     }
 
+    /**
+     * Wait until the Algorithm Loads the Data
+     *
+     * @return \Illuminate\View\View
+     */
+    public function wait()
+    {
+        return view('event.wait');
+    }
+
     public function store(Request $request)
     {
         $obj = Events::create($request->all());

@@ -1,6 +1,0 @@
-Conectar no banco
-    mysql -h127.0.0.1 -uroot -psecret homestead
-
-Servir a aplicação
-    php -S localhost:8080 -t public
-
