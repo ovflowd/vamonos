@@ -14,13 +14,15 @@ class EventController extends Controller
      */
     public function retrieve()
     {
-        $places = Events::all();
+        $events = Events::all();
 
-        foreach ($places as $place) {
-            $place->guests = '';
+        foreach ($events as $event) {
+            $event->owner = $event->owner()->get();
+            $event->guests = $event->guests()->get();
+            $event->places = $event->places()->get();
         }
 
-        return $places;
+        return $events;
     }
 
     /**

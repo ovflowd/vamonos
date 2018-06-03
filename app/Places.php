@@ -32,4 +32,9 @@ class Places extends Model implements AuthenticatableContract, AuthorizableContr
      * @var array
      */
     protected $hidden = [];
+
+    public function event()
+    {
+        return $this->belongsTo('App\Event', 'event_id', 'id');
+    }
 }

@@ -11,12 +11,12 @@ class UserEventSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('events_users')->insert([
+        DB::table('user_events')->insert([
             'event_id' => 1,
             'user_id' => 2
         ]);
 
-        DB::table('events_users')->insert([
+        DB::table('user_events')->insert([
             'event_id' => 1,
             'user_id' => 3
         ]);

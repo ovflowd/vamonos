@@ -21,6 +21,8 @@ class CreatePlacesTable extends Migration
             $table->string('distanceTime');
             $table->string('distanceKm');
             $table->string('totalPrice');
+            $table->unsignedInteger('event_id');
+            $table->foreign('event_id')->references('id')->on('events');
             $table->timestamps();
         });
     }

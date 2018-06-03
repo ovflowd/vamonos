@@ -31,8 +31,8 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      */
     protected $hidden = [];
 
-    public function event()
+    public function events()
     {
-        return $this->belongsTo('App\Event');
+        return $this->hasMany('App\Event', 'user_id', 'id');
     }
 }
