@@ -17,6 +17,15 @@ html, body, p, * {
   }
 }
 
+@keyframes colorchange
+{
+  0%   {background: #184E56;}
+  25%  {background: #2D93A2;}
+  50%  {background: #1C5A63;}
+  75%  {background: #11373C;}
+  100% {background: #184E56;}
+}
+
 .facebook-login {
   width: 264px;
   border-radius: 4px;
@@ -276,6 +285,7 @@ html, body, p, * {
       height: 100%;
       background: #184E57;
       position: absolute;
+      animation: colorchange 20s infinite;
     }
   }
 

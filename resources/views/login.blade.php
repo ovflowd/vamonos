@@ -4,6 +4,18 @@
 
 @section('scripts')
     <script type="application/javascript" src="/js/angular/event.js"></script>
+    <script type="application/javascript">
+        let typed = new Typed('.typed', {
+            strings: ["Buscamos os melhores lugares para o seu evento acontecer.", "Chega de desculpas, agora sei que vai rolar.", "Rolês dando certo, finalmente."],
+            typeSpeed: 40,
+            showCursor: false,
+            loop: true,
+            backSpeed: 40,
+            startDelay: 1000,
+            smartBackspace: true,
+            backDelay: 3000
+        });
+    </script>
 @endsection
 
 @section('content')
@@ -17,11 +29,11 @@
                 </div>
             </center>
             <div class="cell text">
-                <p class="text-center">
+                <p class="text-center typed">
                     Buscamos os melhores lugares para o seu evento acontecer
                 </p>
                 <p class="text-center">
-                    Acessar
+                    <b>registre-se agora.</b>
                 </p>
             </div>
             <div class="cell">

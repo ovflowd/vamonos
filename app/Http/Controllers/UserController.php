@@ -29,7 +29,7 @@ class UserController extends Controller
      * @param string $user (For now not used)
      * @return User[]|\Illuminate\Database\Eloquent\Collection
      */
-    public function friends(string $user)
+    public function friends(string $user = '')
     {
         $friends = UserFriend::all();
 

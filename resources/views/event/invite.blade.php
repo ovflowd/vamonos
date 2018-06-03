@@ -11,7 +11,7 @@
         <div class="grid-x">
             <div class="cell header">
                 <div class="top">
-                    <i class="material-icons float-left arrow">arrow_back</i>
+                    <i class="material-icons float-left arrow" ng-click="goBack()">arrow_back</i>
                     <h5 class="text-center"><img src="/assets/white_logomark.png"/> vamonos</h5>
                     <i class="material-icons float-right person">person</i>
                 </div>

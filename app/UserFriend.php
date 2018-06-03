@@ -30,5 +30,5 @@ class UserFriend extends Model
      *
      * @var string
      */
-    protected $table = 'users_friends';
+    protected $table = 'users_friend';
 }

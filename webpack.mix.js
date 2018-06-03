@@ -34,6 +34,7 @@ mix.scripts([
 // Foundation Scripts
 mix.scripts([
     'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/typed.js/lib/typed.min.js',
     'node_modules/motion-ui/dist/motion-ui.min.js',
     'node_modules/foundation-sites/dist/js/foundation.min.js'
 ], 'public/js/foundation.js');
