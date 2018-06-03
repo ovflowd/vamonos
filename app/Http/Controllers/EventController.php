@@ -59,15 +59,20 @@ class EventController extends Controller
     public function store(Request $request)
     {
         $obj = Events::create($request->all());
-
         return response()->json($obj);
     }
 
-    public function delete($id)
-    {
-        $obj = Events::find($id);
+
+    public function delete($id){
+        $obj  = Events::find($id);
         $obj->delete();
 
         return response()->json('Removed successfully.');
+    }
+
+    public function calculateBestPlace($id){
+        $event = Events::where("id",$id)->get();
+
+        dd($event->name);
     }
 }

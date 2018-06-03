@@ -44,6 +44,10 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->delete('place/{id}','PlaceController@delete');
 
     // UserEvents API Routes
-    $router->post('users/events/','UserEventsController@store');
-    $router->put('users/events/{idUser}/{idEvent}','UserEventsController@update');
+    $router->post('userEvents','UserEventsController@store');
+    $router->put('userEvents/{idUser}/{idEvent}','UserEventsController@update');
+
+    //CalculaLocal
+    $router->get('calculaLocal/{id}', 'EventController@calculateBestPlace');
+
 });
