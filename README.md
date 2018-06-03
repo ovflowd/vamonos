@@ -7,7 +7,9 @@ find a _cool_ place **near** to you and **your crew** :shipit:
 
 Just use PHP wide-used dependency manager, aka, [Composer](https://getcomposer.org). Download it and install it, after that just open your CMD/Bash Terminal and write this command whatever your want.
 
-`composer create-project ovflowd/makkah`
+```
+composer create-project ovflowd/makkah
+```
 
 ### Documentation
 
