@@ -16,12 +16,22 @@
 // Home Route
 $router->get('/', 'HomeController@index');
 
+// Event Routes
+$router->group(['prefix' => 'event'], function () use ($router) {
+    $router->get('start', 'EventController@start');
+
+    $router->get('invite', 'EventController@invite');
+});
+
 // API Routes
 $router->group(['prefix' => 'api'], function () use ($router) {
-    $router->get('/users', 'UserController@retrieve');
+    // User API Routes
+    $router->get('users', 'UserController@retrieve');
 
-    $router->get('/events/users', 'EventUserController@retrieve');
-    $router->get('/events', 'EventController@retrieve');
+    // Event API Routes
+    $router->get('events/users', 'EventUserController@retrieve');
+    $router->get('events', 'EventController@retrieve');
 
-    $router->get('/places', 'PlaceController@retrieve');
+    // Places API Routes
+    $router->get('places', 'PlaceController@retrieve');
 });

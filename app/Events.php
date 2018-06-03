@@ -13,11 +13,11 @@ class Events extends Model implements AuthenticatableContract, AuthorizableContr
     use Authenticatable, Authorizable;
 
     protected $fillable = [
-        'name', 'user_id'
+        'name',
+        'user_id'
     ];
 
     protected $hidden = [];
-
 
     public function guests()
     {

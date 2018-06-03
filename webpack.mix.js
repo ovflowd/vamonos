@@ -45,6 +45,6 @@ mix.js([
 
 // Home Page
 mix.js([
-    'resources/assets/js/pages/home.js',
-    'resources/assets/js/controllers/HomeController.js'
-], 'public/js/angular/home.js');
+    'resources/assets/js/pages/event.js',
+    'resources/assets/js/controllers/EventController.js'
+], 'public/js/angular/event.js');

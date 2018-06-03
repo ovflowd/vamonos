@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserEvent extends Model
 {
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'id_user', 'id_event'
+        'id_user',
+        'id_event'
     ];
 
     /**

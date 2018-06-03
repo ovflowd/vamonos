@@ -8,7 +8,7 @@ use App\Events;
 class EventController extends Controller
 {
     /**
-     * Retrieve all the Users
+     * Retrieve all the Events
      *
      * @return Events[]|\Illuminate\Database\Eloquent\Collection
      */
@@ -16,11 +16,30 @@ class EventController extends Controller
     {
         $places = Events::all();
 
-        foreach ($places as $place){
-            $place->guests = ERRO AQUI!!! =D
+        foreach ($places as $place) {
+            $place->guests = '';
         }
 
-
         return $places;
+    }
+
+    /**
+     * Start an Event
+     *
+     * @return \Illuminate\View\View
+     */
+    public function start()
+    {
+        return view('event.start');
+    }
+
+    /**
+     * Invite Friends to an Event
+     *
+     * @return \Illuminate\View\View
+     */
+    public function invite()
+    {
+        return view('event.invite');
     }
 }

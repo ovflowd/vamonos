@@ -18,7 +18,10 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'lat', 'long'
+        'name',
+        'email',
+        'lat',
+        'long'
     ];
 
     /**
@@ -33,4 +36,3 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         return $this->belongsTo('App\Event');
     }
 }
-

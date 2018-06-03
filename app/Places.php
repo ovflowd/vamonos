@@ -18,7 +18,12 @@ class Places extends Model implements AuthenticatableContract, AuthorizableContr
      * @var array
      */
     protected $fillable = [
-        'name', 'lat', 'long', 'distanceTime', 'distanceKm', 'totalPrice'
+        'name',
+        'lat',
+        'long',
+        'distanceTime',
+        'distanceKm',
+        'totalPrice'
     ];
 
     /**

@@ -8,7 +8,7 @@ use Laravel\Lumen\Routing\Controller;
 class PlaceController extends Controller
 {
     /**
-     * Retrieve all the Users
+     * Retrieve all the Places
      *
      * @return Places[]|\Illuminate\Database\Eloquent\Collection
      */

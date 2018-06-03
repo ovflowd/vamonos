@@ -14,6 +14,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home', compact('hello'));
+        return redirect('event/start');
     }
 }
