@@ -11,20 +11,9 @@ let mix = require('laravel-mix');
  |
  */
 
-// jQuery and Angular Dependencies
-mix.js([
-    'node_modules/angular/angular.min.js',
-    'node_modules/@uirouter/core/_bundles/ui-router-core.min.js',
-    'resources/assets/js/directives/exceptionHandler.js',
-    'resources/assets/js/controllers/AppController.js'
-], 'public/js/vendor.js');
-
-// Foundation Scripts
-mix.scripts([
-    'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/motion-ui/dist/motion-ui.min.js',
-    'node_modules/foundation-sites/dist/js/foundation.min.js'
-], 'public/js/foundation.js');
+mix.options({
+    processCssUrls: false
+});
 
 // Foundation Stylesheet
 mix.styles([
@@ -34,6 +23,25 @@ mix.styles([
 
 // Main Stylesheet
 mix.sass('resources/assets/css/app.scss', 'public/css/app.css');
+
+// jQuery and Angular Dependencies
+mix.scripts([
+    'node_modules/angular/angular.min.js',
+    'node_modules/@uirouter/angularjs/release/angular-ui-router.min.js',
+    'node_modules/ngstorage/ngStorage.min.js'
+], 'public/js/vendor.js');
+
+// Foundation Scripts
+mix.scripts([
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/motion-ui/dist/motion-ui.min.js',
+    'node_modules/foundation-sites/dist/js/foundation.min.js'
+], 'public/js/foundation.js');
+
+// Application
+mix.js([
+    'resources/assets/js/controllers/AppController.js'
+], 'public/js/angular/app.js');
 
 // Home Page
 mix.js([

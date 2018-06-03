@@ -1,3 +1,3 @@
-angular.module("App").controller('AppController', ["$scope", "$state", "$stateParams", "$rootScope", "$sessionStorage", "$localStorage", "$window", function ($scope, $state, $stateParams, $rootScope, $sessionStorage, $localStorage, $window) {
+angular.module("App").controller('AppController', ["$scope", "$rootScope", "$localStorage", function ($scope, $rootScope, $localStorage) {
 
 }]);

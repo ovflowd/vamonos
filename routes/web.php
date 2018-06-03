@@ -20,13 +20,3 @@ $router->get('/', 'HomeController@index');
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('/users', 'UserController@retrieve');
 });
-
-
-/**
- * Routes for resource user-controller
- */
-$app->get('user-controller', 'UserControllersController@all');
-$app->get('user-controller/{id}', 'UserControllersController@get');
-$app->post('user-controller', 'UserControllersController@add');
-$app->put('user-controller/{id}', 'UserControllersController@put');
-$app->delete('user-controller/{id}', 'UserControllersController@remove');

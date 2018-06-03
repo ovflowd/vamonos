@@ -18,8 +18,9 @@
     "motion-ui": "^1.2.3"
   },
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.18",
     "angular": "^1.7.0",
-    "angular-ui-router": "^1.0.18",
-    "foundation-sites": "^6.4.4-rc1"
+    "foundation-sites": "^6.4.4-rc1",
+    "ngstorage": "^0.3.11"
   }
 }
