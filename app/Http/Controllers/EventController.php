@@ -44,4 +44,15 @@ class EventController extends Controller
     {
         return view('event.invite');
     }
+
+    public function store(Request $request){
+        $obj = Events::create($request->all());
+        return response()->json($obj);
+    }
+
+    public function delete($id){
+        $obj  = Car::find($id);
+        $obj->delete();
+        return response()->json('Removed successfully.');
+    }
 }
