@@ -28,16 +28,20 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     // User API Routes
     $router->get('users', 'UserController@retrieve');
     $router->post('user','UserController@store');
-    $router->delete('place/{id}','PlaceController@deleteCar');
+    $router->delete('place/{id}','PlaceController@delete');
 
     // Event API Routes
     $router->get('events/users', 'EventUserController@retrieve');
     $router->get('events', 'EventController@retrieve');
     $router->post('event','EventController@store');
-    $router->delete('event/{id}','EventController@deleteCar');
+    $router->delete('event/{id}','EventController@delete');
 
     // Places API Routes
     $router->get('places', 'PlaceController@retrieve');
     $router->post('place','PlaceController@store');
-    $router->delete('place/{id}','PlaceController@deleteCar');
+    $router->delete('place/{id}','PlaceController@delete');
+
+    // UserEvents API Routes
+    $router->post('userEvents','UserEventsController@store');
+    $router->put('userEvents/{idUser}/{idEvent}','UserEventsController@update');
 });

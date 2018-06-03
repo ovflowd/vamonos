@@ -7,6 +7,10 @@ use Laravel\Lumen\Routing\Controller;
 
 class UsersPlacesController extends Controller
 {
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function store(Request $request){
         $obj = UsersPlaces::create($request->all());
         return response()->json($obj);
