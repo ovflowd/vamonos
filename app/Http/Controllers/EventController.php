@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Laravel\Lumen\Routing\Controller;
-use Illuminate\View\View;
 use App\Events;
 
 class EventController extends Controller
@@ -16,6 +15,11 @@ class EventController extends Controller
     public function retrieve()
     {
         $places = Events::all();
+
+        foreach ($places as $place){
+            $place->guests = ERRO AQUI!!! =D
+        }
+
 
         return $places;
     }

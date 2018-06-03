@@ -12,19 +12,19 @@ class Events extends Model implements AuthenticatableContract, AuthorizableContr
 {
     use Authenticatable, Authorizable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name', 'user_id'
     ];
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
     protected $hidden = [];
+
+
+    public function guests()
+    {
+        return $this->hasManyThrough('App\User', 'App\UserEvent',
+            'user_id',
+            'id_event',
+            'id',
+            'id');
+    }
 }
