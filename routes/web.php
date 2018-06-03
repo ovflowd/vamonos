@@ -19,4 +19,9 @@ $router->get('/', 'HomeController@index');
 // API Routes
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('/users', 'UserController@retrieve');
+
+    $router->get('/events/users', 'EventUserController@retrieve');
+    $router->get('/events', 'EventController@retrieve');
+
+    $router->get('/places', 'PlaceController@retrieve');
 });
