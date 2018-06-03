@@ -14,7 +14,9 @@ let mix = require('laravel-mix');
 // jQuery and Angular Dependencies
 mix.js([
     'node_modules/angular/angular.min.js',
-    'node_modules/@uirouter/core/_bundles/ui-router-core.min.js'
+    'node_modules/@uirouter/core/_bundles/ui-router-core.min.js',
+    'resources/assets/js/directives/exceptionHandler.js',
+    'resources/assets/js/controllers/AppController.js'
 ], 'public/js/vendor.js');
 
 // Foundation Scripts
