@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc5af7e8c215103c5119d69e66d29429",
+    "content-hash": "6d3111e035d0a80739742c4c57f47c4b",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1661,6 +1661,44 @@
                 "twitter"
             ],
             "time": "2016-08-17T00:36:58+00:00"
+        },
+        {
+            "name": "mlntn/lumen-artisan-serve",
+            "version": "1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mlntn/lumen-artisan-serve.git",
+                "reference": "554c5ce862f92a92895cf05bf25ba04f21ca8714"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mlntn/lumen-artisan-serve/zipball/554c5ce862f92a92895cf05bf25ba04f21ca8714",
+                "reference": "554c5ce862f92a92895cf05bf25ba04f21ca8714",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jared Mellentine",
+                    "email": "jared@mellentine.com"
+                }
+            ],
+            "description": "artisan serve for Lumen projects",
+            "homepage": "http://github.com/mlntn/lumen-artisan-serve",
+            "keywords": [
+                "artisan",
+                "lumen"
+            ],
+            "time": "2018-05-28T02:23:21+00:00"
         },
         {
             "name": "monolog/monolog",

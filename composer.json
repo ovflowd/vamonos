@@ -10,6 +10,7 @@
         "vlucas/phpdotenv": "~2.2",
         "laravel/socialite": "^2.0",
         "wn/lumen-generators": "^1.3"
+        "mlntn/lumen-artisan-serve": "~1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
