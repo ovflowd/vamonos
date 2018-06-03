@@ -51,8 +51,14 @@ class EventController extends Controller
     }
 
     public function delete($id){
-        $obj  = Car::find($id);
+        $obj  = Events::find($id);
         $obj->delete();
         return response()->json('Removed successfully.');
+    }
+
+    public function calculateBestPlace($id){
+        $event = Events::get($id);
+
+        dd($event);
     }
 }

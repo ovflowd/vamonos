@@ -44,4 +44,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     // UserEvents API Routes
     $router->post('userEvents','UserEventsController@store');
     $router->put('userEvents/{idUser}/{idEvent}','UserEventsController@update');
+
+    //CalculaLocal
+    $router->get('calculaLocal/{id}', 'EventController@calculateBestPlace');
 });
