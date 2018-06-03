@@ -12,7 +12,7 @@
         <div class="grid-x">
             <div class="cell content">
                 <h2 class="text-center">
-                    O que você pretente fazer hoje?
+                    <b>@{{ storage.userData.name }}</b>, O que você pretende fazer hoje?
                 </h2>
                 <input class="float-center" type="text" ng-model="storage.eventName"
                        placeholder="Ex: jogar futebol com os amigos"/>

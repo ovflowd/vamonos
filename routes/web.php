@@ -17,7 +17,7 @@
 $router->get('/', 'HomeController@index');
 
 // User Routes (Authentication)
-$router->group(['prefix' => 'user'], function () use ($router) {
+$router->group(['prefix' => 'users'], function () use ($router) {
     $router->get('facebook', 'UserController@facebook');
 
     $router->get('facebook/callback', 'UserController@facebookCallback');
@@ -25,7 +25,7 @@ $router->group(['prefix' => 'user'], function () use ($router) {
 
 // Event Routes
 $router->group(['prefix' => 'event'], function () use ($router) {
-    $router->get('start/{startCode?}', 'EventController@start');
+    $router->get('start/{startCode}', 'EventController@start');
 
     $router->get('invite', 'EventController@invite');
 
