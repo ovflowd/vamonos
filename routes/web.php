@@ -11,6 +11,12 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+/** @var \Laravel\Lumen\Routing\Router $router */
+
+// Home Route
+$router->get('/', 'HomeController@index');
+
+// API Routes
+$router->group(['prefix' => 'api'], function () use ($router) {
+    // API Routes Here
 });
