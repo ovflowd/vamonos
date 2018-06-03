@@ -3,12 +3,17 @@ angular.module("page.event").controller('EventController', ["$scope", "$localSto
 
     $scope.storage.$default({
         eventName: '',
-        eventFriends: []
+        eventFriends: [],
+        searchData: []
     });
 
     $scope.createEvent = function () {
         alert ('Estamos processando o seu evento, chamado ' + $scope.storage.eventName + '. Aguarde a Thamires :)');
 
         $window.location.href = '/event/invite';
-    }
+    };
+
+    $scope.selectFriend = function (friendId) {
+        jQuery('.friends li:nth-of-type(' + friendId + ')').toggleClass('is-active');
+    };
 }]);
