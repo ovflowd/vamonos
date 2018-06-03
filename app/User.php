@@ -21,7 +21,9 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         'name',
         'email',
         'lat',
-        'long'
+        'long',
+        'facebook',
+        'session_token'
     ];
 
     /**

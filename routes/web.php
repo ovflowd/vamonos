@@ -16,6 +16,13 @@
 // Home Route
 $router->get('/', 'HomeController@index');
 
+// User Routes (Authentication)
+$router->group(['prefix' => 'user'], function () use ($router) {
+    $router->get('facebook', 'UserController@facebook');
+
+    $router->get('facebook/callback', 'UserController@facebookCallback');
+});
+
 // Event Routes
 $router->group(['prefix' => 'event'], function () use ($router) {
     $router->get('start', 'EventController@start');
@@ -31,23 +38,23 @@ $router->group(['prefix' => 'event'], function () use ($router) {
 $router->group(['prefix' => 'api'], function () use ($router) {
     // User API Routes
     $router->get('users', 'UserController@retrieve');
+    $router->get('users/{id}', 'UserController@getOne');
     $router->post('users','UserController@store');
-    $router->delete('place/{id}','PlaceController@delete');
 
     // Event API Routes
     $router->get('events/users', 'EventUserController@retrieve');
     $router->get('events', 'EventController@retrieve');
-    $router->post('event','EventController@store');
-    $router->delete('event/{id}','EventController@delete');
+    $router->post('events','EventController@store');
+    $router->delete('events/{id}','EventController@delete');
 
     // Places API Routes
-    $router->get('places', 'PlaceController@retrieve');
-    $router->post('place','PlaceController@store');
-    $router->delete('place/{id}','PlaceController@delete');
+    $router->get('placess', 'PlaceController@retrieve');
+    $router->post('places','PlaceController@store');
+    $router->delete('places/{id}','PlaceController@delete');
 
     // UserEvents API Routes
-    $router->post('user/events','UserEventsController@store');
-    $router->put('user/events/{idUser}/{idEvent}','UserEventsController@update');
+    $router->post('users/events','UserEventsController@store');
+    $router->put('users/events/{idUser}/{idEvent}','UserEventsController@update');
 
     // CalculaLocal
     $router->get('calculate/{id}', 'EventController@calculateBestPlace');

@@ -76,6 +76,7 @@ class EventController extends Controller
     public function store(Request $request)
     {
         $obj = Events::create($request->all());
+
         return response()->json($obj);
     }
 

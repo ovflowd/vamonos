@@ -1,13 +1,14 @@
 angular.module("page.event").controller('EventController', ["$scope", "$localStorage", "$http", "$window", function ($scope, $localStorage, $http, $window) {
     $scope.storage = $localStorage;
 
-    $scope.storage.$default({
-        eventName: '',
-        eventFriends: [],
-        searchData: []
-    });
-
     $scope.createEvent = function () {
+        $http.post('/events', {
+            data: {
+                name: $scope.storage.eventName,
+                user_id: $scope.storage.userData.id
+            }
+        });
+
         $window.location.href = '/event/invite';
     };
 
@@ -15,7 +16,13 @@ angular.module("page.event").controller('EventController', ["$scope", "$localSto
         jQuery('.friends li:nth-of-type(' + friendId + ')').toggleClass('is-active');
     };
 
-    $scope.redirectUser = function () {
+    $scope.redirectUser = function (tokenIdentifier) {
+        console.log(tokenIdentifier);
+
+        $scope.storage.sessionToken = tokenIdentifier;
+
+        $scope.getUserData(tokenIdentifier);
+
         $window.location.href = '/event/start';
     };
 
