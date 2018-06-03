@@ -27,7 +27,7 @@ $router->group(['prefix' => 'event'], function () use ($router) {
 $router->group(['prefix' => 'api'], function () use ($router) {
     // User API Routes
     $router->get('users', 'UserController@retrieve');
-    $router->post('user','UserController@store');
+    $router->post('users','UserController@store');
     $router->delete('place/{id}','PlaceController@delete');
 
     // Event API Routes
@@ -42,6 +42,6 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->delete('place/{id}','PlaceController@delete');
 
     // UserEvents API Routes
-    $router->post('userEvents','UserEventsController@store');
-    $router->put('userEvents/{idUser}/{idEvent}','UserEventsController@update');
+    $router->post('users/events/','UserEventsController@store');
+    $router->put('users/events/{idUser}/{idEvent}','UserEventsController@update');
 });
