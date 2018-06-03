@@ -19,14 +19,7 @@ $router->get('/', 'HomeController@index');
 // API Routes
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('/users', 'UserController@retrieve');
+    $router->get('/events_users', 'EventUserController@retrieve');
+    $router->get('/events', 'EventController@retrieve');
+    $router->get('/places', 'PlaceController@retrieve');
 });
-
-
-/**
- * Routes for resource user-controller
- */
-$app->get('user-controller', 'UserControllersController@all');
-$app->get('user-controller/{id}', 'UserControllersController@get');
-$app->post('user-controller', 'UserControllersController@add');
-$app->put('user-controller/{id}', 'UserControllersController@put');
-$app->delete('user-controller/{id}', 'UserControllersController@remove');
