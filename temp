@@ -1,0 +1,1 @@
+php artisan wn:resource users "id;integer;required name;string;required;fillable date;;date" --add=timestamps

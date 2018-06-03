@@ -14,3 +14,8 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/users', function(){
+    $users = DB::table('users')->get();
+    return $users;
+});
