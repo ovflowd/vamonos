@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>vamonos - let's go together?</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/foundation.css">
     <link rel="stylesheet" href="/css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">

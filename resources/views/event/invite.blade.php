@@ -31,76 +31,12 @@
             <div class="cell content">
                 <small>Recentes procurados</small>
                 <ul class="menu vertical friends">
-                    <li ng-click="selectFriend(1)">
-                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
+                    <li ng-repeat="(key, friend) in storage.userFriends" ng-click="selectFriend(key + 1)">
+                        <div class="img float-left" ng-style="{'background-image' : 'url(' + friend.url + ')'}">
                             <i class="material-icons">check</i>
                         </div>
                         <span class="float-left">
-                            Funk é Ruim
-                        </span>
-                    </li>
-                    <li ng-click="selectFriend(2)">
-                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
-                            <i class="material-icons">check</i>
-                        </div>
-                        <span class="float-left">
-                            Funk é Ruim
-                        </span>
-                    </li>
-                    <li ng-click="selectFriend(3)">
-                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
-                            <i class="material-icons">check</i>
-                        </div>
-                        <span class="float-left">
-                            Funk é Ruim
-                        </span>
-                    </li>
-                    <li ng-click="selectFriend(4)">
-                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
-                            <i class="material-icons">check</i>
-                        </div>
-                        <span class="float-left">
-                            Funk é Ruim
-                        </span>
-                    </li>
-                    <li ng-click="selectFriend(5)">
-                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
-                            <i class="material-icons">check</i>
-                        </div>
-                        <span class="float-left">
-                            Funk é Ruim
-                        </span>
-                    </li>
-                    <li ng-click="selectFriend(6)">
-                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
-                            <i class="material-icons">check</i>
-                        </div>
-                        <span class="float-left">
-                            Funk é Ruim
-                        </span>
-                    </li>
-                    <li ng-click="selectFriend(7)">
-                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
-                            <i class="material-icons">check</i>
-                        </div>
-                        <span class="float-left">
-                            Funk é Ruim
-                        </span>
-                    </li>
-                    <li ng-click="selectFriend(8)">
-                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
-                            <i class="material-icons">check</i>
-                        </div>
-                        <span class="float-left">
-                            Funk é Ruim
-                        </span>
-                    </li>
-                    <li ng-click="selectFriend(9)">
-                        <div class="img float-left" style="background-image: url('https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg')">
-                            <i class="material-icons">check</i>
-                        </div>
-                        <span class="float-left">
-                            Funk é Ruim
+                            @{{ friend.name }}
                         </span>
                     </li>
                 </ul>

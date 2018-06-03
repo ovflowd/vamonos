@@ -41,6 +41,9 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('users/{id}', 'UserController@getOne');
     $router->post('users','UserController@store');
 
+    // User Friends API Routes
+    $router->get('friends', 'UserController@friends');
+
     // Event API Routes
     $router->get('events/users', 'EventUserController@retrieve');
     $router->get('events', 'EventController@retrieve');

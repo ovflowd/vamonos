@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Events;
 use App\User;
+use App\UserFriend;
 use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller;
 use Laravel\Socialite\Facades\Socialite;
@@ -20,6 +21,19 @@ class UserController extends Controller
         $users = User::all();
 
         return $users;
+    }
+
+    /**
+     * Retrieve all the Friends
+     *
+     * @param string $user (For now not used)
+     * @return User[]|\Illuminate\Database\Eloquent\Collection
+     */
+    public function friends(string $user)
+    {
+        $friends = UserFriend::all();
+
+        return $friends;
     }
 
     /**
@@ -70,7 +84,9 @@ class UserController extends Controller
     public function facebook()
     {
         return Socialite::with('facebook')->scopes([
-            'email', 'user_birthday', 'user_friends'
+            'email',
+            'user_birthday',
+            'user_friends'
         ])->stateless()->redirect();
     }
 

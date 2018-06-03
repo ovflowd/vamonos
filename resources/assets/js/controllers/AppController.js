@@ -3,13 +3,13 @@ angular.module("App").controller('AppController', ["$scope", "$rootScope", "$loc
 
     $scope.storage.$default({
         eventName: '',
-        eventFriends: [],
+        userFriends: [],
         searchData: [],
         sessionToken: null,
         userData: null
     });
 
-    $scope.controller = this;
+    $scope.appController = this;
 
     $scope.getUserData = function (userToken) {
         $http.get('/api/users/' + userToken).then(function (response) {
@@ -21,11 +21,19 @@ angular.module("App").controller('AppController', ["$scope", "$rootScope", "$loc
         return '/users/facebook';
     };
 
+    $scope.loadFriends = function () {
+        $http.get('/api/users/friends').then(function (response) {
+            $scope.storage.userFriends = response.data;
+        });
+    };
+
     if (sessionAuth !== null && sessionAuth !== undefined) {
         $scope.storage.sessionToken = sessionAuth;
     }
 
     if ($scope.storage.sessionToken !== null) {
         $scope.getUserData($scope.storage.sessionToken);
+
+        $scope.loadFriends();
     }
 }]);

@@ -1,6 +1,8 @@
 angular.module("page.event").controller('EventController', ["$scope", "$localStorage", "$http", "$window", function ($scope, $localStorage, $http, $window) {
     $scope.storage = $localStorage;
 
+    $scope.eventController = this;
+
     $scope.createEvent = function () {
         $http.post('/events', {
             data: {
